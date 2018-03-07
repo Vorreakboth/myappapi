@@ -65,7 +65,7 @@
                                 <rect key="frame" x="168.5" y="559.5" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="5K0-zs-SrD" kind="show" id="lSf-bp-dEU"/>
+                                    <action selector="buttonLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eMe-Zr-gwg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUz-Vz-M3l">
@@ -154,7 +154,7 @@
                                 <rect key="frame" x="159" y="469.5" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="pUs-SE-gV0"/>
+                                    <action selector="buttonRegister:" destination="5K0-zs-SrD" eventType="touchUpInside" id="BP7-P7-HWD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEE-Zu-vX4">
@@ -272,8 +272,4 @@
             <point key="canvasLocation" x="-415" y="33"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="lSf-bp-dEU"/>
-        <segue reference="pUs-SE-gV0"/>
-    </inferredMetricsTieBreakers>
 </document>

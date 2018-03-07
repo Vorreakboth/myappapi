@@ -45,6 +45,12 @@ class ViewController: UIViewController {
                 }
         }
     }
+    @IBAction func buttonLogin(_ sender: UIButton) {
+        //switching to login screen
+        let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        self.navigationController?.pushViewController(loginViewController, animated: true)
+        self.dismiss(animated: false, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

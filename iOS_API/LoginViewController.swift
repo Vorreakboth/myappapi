@@ -69,10 +69,21 @@ class LoginViewController: UIViewController {
                 }
         }
     }
-    
+    @IBAction func buttonRegister(_ sender: UIButton) {
+        //switching the screen
+        let accountViewController = self.storyboard?.instantiateViewController(withIdentifier: "CreateViewController") as! ViewController
+        self.navigationController?.pushViewController(accountViewController, animated: true)
+        
+        self.dismiss(animated: false, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if defaultValues.string(forKey: "username") != nil{
+            let profileViewController = self.storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+            self.navigationController?.pushViewController(profileViewController, animated: true)
+            
+        }
         // Do any additional setup after loading the view.
     }
 
