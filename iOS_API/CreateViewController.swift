@@ -10,7 +10,8 @@ import UIKit
 import Alamofire
 
 class ViewController: UIViewController {
-    let URL_USER_REGISTER = "https://myappapi.000webhostapp.com/v1/register.php"
+    //let URL_USER_REGISTER = "https://myappapi.000webhostapp.com/v1/register.php"
+    let URL_USER_REGISTER = "http://localhost/LoginAPI/v1/register.php"
     
     @IBOutlet weak var textFieldUsername: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
@@ -41,7 +42,6 @@ class ViewController: UIViewController {
                     
                     //displaying the message in label
                     self.labelMessage.text = jsonData.value(forKey: "message") as! String?
-                    self.labelMessage.isHidden = false
                 }
         }
     }
