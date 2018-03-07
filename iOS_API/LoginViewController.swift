@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     //let URL_USER_LOGIN = "https://myappapi.000webhostapp.com/v1/login.php"
     let URL_USER_LOGIN = "http://localhost/LoginAPI/v1/login.php"
@@ -84,6 +84,13 @@ class LoginViewController: UIViewController {
             self.navigationController?.pushViewController(profileViewController, animated: true)
             
         }
+        
+        textFieldUserName.delegate = self
+        textFieldPassword.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector (keyboardWillChange(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector (keyboardWillChange(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector (keyboardWillChange(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
         // Do any additional setup after loading the view.
     }
 
@@ -92,15 +99,28 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
-    */
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textFieldUserName.resignFirstResponder()
+        textFieldPassword.resignFirstResponder()
+        return true
+    }
+    
+    @objc func keyboardWillChange(notification: Notification){
+        guard let keyboardRect = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else{
+            return
+        }
+        if notification.name == Notification.Name.UIKeyboardWillShow || notification.name == Notification.Name.UIKeyboardWillChangeFrame{
+            view.frame.origin.y = -keyboardRect.height+100
+        }
+        else {
+            view.frame.origin.y = 0
+        }
+    }
 
 }
