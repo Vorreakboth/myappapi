@@ -12,7 +12,8 @@ import Alamofire
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
     //let URL_USER_LOGIN = "https://myappapi.000webhostapp.com/v1/login.php"
-    let URL_USER_LOGIN = "http://localhost/LoginAPI/v1/login.php"
+    //let URL_USER_LOGIN = "http://localhost/LoginAPI/v1/login.php"
+    let URL_USER_LOGIN = "http://192.168.1.173/LoginAPI/v1/login.php"
     
     let defaultValues = UserDefaults.standard
     
@@ -67,6 +68,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         self.labelMessage.text = "Invalid username or password"
                     }
                 }
+                else {
+                    self.labelMessage.text = "Error Connection"
+                }
         }
     }
     @IBAction func buttonRegister(_ sender: UIButton) {
@@ -116,7 +120,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         }
         if notification.name == Notification.Name.UIKeyboardWillShow || notification.name == Notification.Name.UIKeyboardWillChangeFrame{
-            view.frame.origin.y = -keyboardRect.height+100
+            view.frame.origin.y = -keyboardRect.height + 150
         }
         else {
             view.frame.origin.y = 0

@@ -11,7 +11,8 @@ import Alamofire
 
 class ViewController: UIViewController, UITextFieldDelegate {
     //let URL_USER_REGISTER = "https://myappapi.000webhostapp.com/v1/register.php"
-    let URL_USER_REGISTER = "http://localhost/LoginAPI/v1/register.php"
+    //let URL_USER_REGISTER = "http://localhost/LoginAPI/v1/register.php"
+    let URL_USER_REGISTER = "http://192.168.1.173/LoginAPI/v1/register.php"
     
     @IBOutlet weak var textFieldUsername: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
@@ -42,6 +43,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     
                     //displaying the message in label
                     self.labelMessage.text = jsonData.value(forKey: "message") as! String?
+                }
+                else {
+                    self.labelMessage.text = "Error Connection"
                 }
         }
     }
@@ -92,7 +96,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return
         }
         if notification.name == Notification.Name.UIKeyboardWillShow || notification.name == Notification.Name.UIKeyboardWillChangeFrame{
-            view.frame.origin.y = -keyboardRect.height+100
+            view.frame.origin.y = -keyboardRect.height + 150
         }
         else {
             view.frame.origin.y = 0
