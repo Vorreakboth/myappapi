@@ -88,7 +88,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="lht-jz-7az" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="02z-a1-CXv"/>
                             <constraint firstItem="0xl-oc-Gie" firstAttribute="top" secondItem="3Gp-4w-GVE" secondAttribute="bottom" constant="20" id="0F2-fJ-G7n"/>
@@ -196,7 +196,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="hN9-Xd-BjD" firstAttribute="centerX" secondItem="Qd4-ZO-La1" secondAttribute="centerX" id="17L-RR-tQF"/>
                             <constraint firstItem="fYP-iy-oeQ" firstAttribute="centerX" secondItem="Qd4-ZO-La1" secondAttribute="centerX" id="4P7-Lz-16E"/>
@@ -261,7 +261,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="GPG-4v-cag" firstAttribute="top" secondItem="Nao-mT-WEA" secondAttribute="bottom" constant="20" id="IXF-VP-3vZ"/>
                             <constraint firstItem="Nao-mT-WEA" firstAttribute="centerX" secondItem="3qq-Qf-VsN" secondAttribute="centerX" id="Ked-Lw-ZYh"/>
