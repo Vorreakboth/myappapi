@@ -11,9 +11,9 @@ import Alamofire
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
-    //let URL_USER_LOGIN = "https://myappapi.000webhostapp.com/v1/login.php"
+    let URL_USER_LOGIN = "https://myappapi.000webhostapp.com/v1/login.php"
     //let URL_USER_LOGIN = "http://localhost/LoginAPI/v1/login.php"
-    let URL_USER_LOGIN = "http://192.168.1.173/LoginAPI/v1/login.php"
+    //let URL_USER_LOGIN = "http://192.168.1.173/LoginAPI/v1/login.php"
     
     let defaultValues = UserDefaults.standard
     

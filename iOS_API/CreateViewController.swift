@@ -10,9 +10,9 @@ import UIKit
 import Alamofire
 
 class ViewController: UIViewController, UITextFieldDelegate {
-    //let URL_USER_REGISTER = "https://myappapi.000webhostapp.com/v1/register.php"
+    let URL_USER_REGISTER = "https://myappapi.000webhostapp.com/v1/register.php"
     //let URL_USER_REGISTER = "http://localhost/LoginAPI/v1/register.php"
-    let URL_USER_REGISTER = "http://192.168.1.173/LoginAPI/v1/register.php"
+    //let URL_USER_REGISTER = "http://192.168.1.173/LoginAPI/v1/register.php"
     
     @IBOutlet weak var textFieldUsername: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
