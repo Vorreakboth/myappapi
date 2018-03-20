@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController {
         UserDefaults.standard.synchronize()
         
         //switching to login screen
-        let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "QRCodeViewController") as! QRCodeViewController
         self.navigationController?.pushViewController(loginViewController, animated: true)
         self.dismiss(animated: false, completion: nil)
     }
@@ -35,7 +35,10 @@ class ProfileViewController: UIViewController {
             labelUserName.text = name
             self.labelUserName.isHidden = false
         }else{
-            //send back to login view controller
+            //switching to login screen
+            let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "QRCodeViewController") as! QRCodeViewController
+            self.navigationController?.pushViewController(loginViewController, animated: true)
+            self.dismiss(animated: false, completion: nil)
         }
         // Do any additional setup after loading the view.
     }
