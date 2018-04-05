@@ -10,7 +10,6 @@ import UIKit
 import Alamofire
 import AVFoundation
 
-
 class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate{
     
     var captureSession: AVCaptureSession!
@@ -95,7 +94,6 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     
     func found(code: String) {
         
-        
         let alert = UIAlertController(title: "QR Code", message: "", preferredStyle: UIAlertControllerStyle.alert)
         
         // add an action (button)
@@ -109,15 +107,15 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             activityIndicator.startAnimating()
             
             let URL_USER_LOGIN = "https://myappapi.000webhostapp.com/v1/login.php"
-            
             let defaultValues = UserDefaults.standard
             
-            let login    = code
+            //Need to fix
+            let login = code + "/"
             let loginArr = login.components(separatedBy: "/")
-            
             let username = loginArr[0]
             let password = loginArr[1]
-            
+            print(login)
+
             //getting the username and password
             let parameters: Parameters=[
                 "username":username,
@@ -167,11 +165,13 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                             //error message in case of invalid credential
                             self.captureSession.startRunning()
                             self.dismiss(animated: false)
+                            activityIndicator.stopAnimating()
                         }
                     }
                     else {
                         self.captureSession.startRunning()
                         self.dismiss(animated: false)
+                        activityIndicator.stopAnimating()
                     }
             }
             

@@ -11,6 +11,9 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     //label again don't copy instead connect
+   
+    @IBOutlet weak var labelPhone: UILabel!
+    @IBOutlet weak var labelEmail: UILabel!
     @IBOutlet weak var labelUserName: UILabel!
     
     //button
