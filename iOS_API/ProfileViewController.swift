@@ -16,7 +16,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var labelEmail: UILabel!
     @IBOutlet weak var labelUserName: UILabel!
     
-    //button
+    //button Logout
     @IBAction func buttonLogout(_ sender: UIButton) {
         
         //removing values from default
@@ -33,16 +33,26 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         let defaultValues = UserDefaults.standard
-        if let name = defaultValues.string(forKey: "username"){
-            //setting the name to label
-            labelUserName.text = name
-            self.labelUserName.isHidden = false
-        }else{
+        if defaultValues.string(forKey: "username") == nil{
             //switching to login screen
-            let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "QRCodeViewController") as! QRCodeViewController
+            let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "main_view") as! ViewController
             self.navigationController?.pushViewController(loginViewController, animated: true)
             self.dismiss(animated: false, completion: nil)
         }
+        else{
+            let username = defaultValues.string(forKey: "username")
+            let email = defaultValues.string(forKey: "useremail")
+            let phone = defaultValues.string(forKey: "userphone")
+
+            //setting the name to label
+            labelUserName.text = username
+            labelEmail.text = email
+            labelPhone.text = phone
+            self.labelUserName.isHidden = false
+            self.labelEmail.isHidden = false
+            self.labelPhone.isHidden = false
+        }
+        
         // Do any additional setup after loading the view.
     }
 

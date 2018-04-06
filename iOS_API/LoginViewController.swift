@@ -75,7 +75,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func buttonRegister(_ sender: UIButton) {
         //switching the screen
-        let accountViewController = self.storyboard?.instantiateViewController(withIdentifier: "CreateViewController") as! ViewController
+        let accountViewController = self.storyboard?.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
         self.navigationController?.pushViewController(accountViewController, animated: true)
         
         self.dismiss(animated: false, completion: nil)

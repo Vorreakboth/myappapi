@@ -1,15 +1,15 @@
 //
-//  ViewController.swift
+//  SignupViewController.swift
 //  iOS_API
 //
-//  Created by Computer on 3/5/18.
+//  Created by Computer on 4/6/18.
 //  Copyright © 2018 Computer. All rights reserved.
 //
 
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class SignupViewController: UIViewController, UITextFieldDelegate {
     let URL_USER_REGISTER = "https://myappapi.000webhostapp.com/v1/register.php"
     //let URL_USER_REGISTER = "http://localhost/LoginAPI/v1/register.php"
     //let URL_USER_REGISTER = "http://192.168.1.173/LoginAPI/v1/register.php"
@@ -104,6 +104,4 @@ class ViewController: UIViewController, UITextFieldDelegate {
             view.frame.origin.y = 0
         }
     }
-    
 }
-

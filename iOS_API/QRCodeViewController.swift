@@ -94,16 +94,16 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     
     func found(code: String) {
         
-        let alert = UIAlertController(title: "QR Code", message: "", preferredStyle: UIAlertControllerStyle.alert)
+        //alert message
+        let alert = UIAlertController(title: "Login with this QR Code", message: "", preferredStyle: .alert)
         
         // add an action (button)
-        alert.addAction(UIAlertAction(title: "Sign In", style: UIAlertActionStyle.default, handler: { action in
+        alert.addAction(UIAlertAction(title: "Sign In", style: .default, handler: { action in
             
             let activityIndicator = UIActivityIndicatorView()
             activityIndicator.center = self.view.center
             activityIndicator.hidesWhenStopped = true
             self.view.addSubview(activityIndicator)
-            
             activityIndicator.startAnimating()
             
             let URL_USER_LOGIN = "https://myappapi.000webhostapp.com/v1/login.php"
@@ -158,20 +158,31 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                             //switching the screen
                             let profileViewController = self.storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
                             self.navigationController?.pushViewController(profileViewController, animated: true)
-                            
                             self.dismiss(animated: false, completion: nil)
                         
                         }else{
                             //error message in case of invalid credential
-                            self.captureSession.startRunning()
-                            self.dismiss(animated: false)
-                            activityIndicator.stopAnimating()
+                            let error = UIAlertController(title: "Invalid", message: "Your username and password wrong try again !!!", preferredStyle: .alert)
+                            error.addAction(UIAlertAction(title: "OK", style: .default, handler:{
+                                action in
+                                    self.captureSession.startRunning()
+                                    self.dismiss(animated: false)
+                                    activityIndicator.stopAnimating()
+                                    print("error password")
+                            }))
+                            self.present(error, animated: true, completion: nil)
                         }
                     }
                     else {
-                        self.captureSession.startRunning()
-                        self.dismiss(animated: false)
-                        activityIndicator.stopAnimating()
+                        //Server error
+                        let errorserver = UIAlertController(title: "Invalid", message: "Can't connect to server !!!", preferredStyle: .alert)
+                        errorserver.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                                self.captureSession.startRunning()
+                                self.dismiss(animated: false)
+                                activityIndicator.stopAnimating()
+                                print("error server")
+                            }))
+                        self.present(errorserver, animated: true, completion: nil)
                     }
             }
             
