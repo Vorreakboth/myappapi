@@ -321,7 +321,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zas-eK-Jof">
-                                <rect key="frame" x="160" y="208.5" width="55" height="30"/>
+                                <rect key="frame" x="160" y="318.5" width="55" height="30"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -330,7 +330,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mL-Wa-bqa">
-                                <rect key="frame" x="164" y="318.5" width="47" height="30"/>
+                                <rect key="frame" x="164" y="418.5" width="47" height="30"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -339,7 +339,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UC-30-tyU">
-                                <rect key="frame" x="136" y="428.5" width="103" height="30"/>
+                                <rect key="frame" x="136" y="368.5" width="103" height="30"/>
                                 <state key="normal" title="QR Code Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -347,15 +347,25 @@
                                     <segue destination="ZyP-Z7-fAb" kind="show" id="mFo-in-Yhs"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" image="teamwork" translatesAutoresizingMaskIntoConstraints="NO" id="4Lj-IL-EKn">
+                                <rect key="frame" x="112" y="148.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="QDe-0P-hT3"/>
+                                    <constraint firstAttribute="width" constant="150" id="cZU-Iw-taX"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="5mL-Wa-bqa" firstAttribute="centerX" secondItem="xJa-cF-m0w" secondAttribute="centerX" id="G6f-xe-xBa"/>
-                            <constraint firstItem="5mL-Wa-bqa" firstAttribute="top" secondItem="zas-eK-Jof" secondAttribute="bottom" constant="80" id="U0j-7H-lPX"/>
-                            <constraint firstItem="zas-eK-Jof" firstAttribute="centerX" secondItem="xJa-cF-m0w" secondAttribute="centerX" id="etx-zS-rk3"/>
-                            <constraint firstItem="3UC-30-tyU" firstAttribute="top" secondItem="5mL-Wa-bqa" secondAttribute="bottom" constant="80" id="kWY-2d-kjA"/>
-                            <constraint firstItem="3UC-30-tyU" firstAttribute="centerX" secondItem="xJa-cF-m0w" secondAttribute="centerX" id="qh6-oZ-qpW"/>
-                            <constraint firstItem="5mL-Wa-bqa" firstAttribute="centerY" secondItem="xJa-cF-m0w" secondAttribute="centerY" id="wjY-Bd-MM6"/>
+                            <constraint firstItem="3UC-30-tyU" firstAttribute="centerX" secondItem="xJa-cF-m0w" secondAttribute="centerX" id="7E2-cI-ONJ"/>
+                            <constraint firstItem="zas-eK-Jof" firstAttribute="centerX" secondItem="xJa-cF-m0w" secondAttribute="centerX" id="9RF-YB-Ej3"/>
+                            <constraint firstItem="5mL-Wa-bqa" firstAttribute="top" secondItem="3UC-30-tyU" secondAttribute="bottom" constant="20" id="MF8-jd-xBQ"/>
+                            <constraint firstItem="zas-eK-Jof" firstAttribute="top" secondItem="4Lj-IL-EKn" secondAttribute="bottom" constant="20" id="S51-Hs-o9e"/>
+                            <constraint firstItem="4Lj-IL-EKn" firstAttribute="centerX" secondItem="xJa-cF-m0w" secondAttribute="centerX" id="ce9-wa-xmn"/>
+                            <constraint firstItem="zas-eK-Jof" firstAttribute="centerX" secondItem="xJa-cF-m0w" secondAttribute="centerX" id="elJ-S4-sUS"/>
+                            <constraint firstItem="zas-eK-Jof" firstAttribute="centerY" secondItem="xJa-cF-m0w" secondAttribute="centerY" id="pCb-Su-3P4"/>
+                            <constraint firstItem="5mL-Wa-bqa" firstAttribute="centerX" secondItem="xJa-cF-m0w" secondAttribute="centerX" id="pyq-Xq-Z9G"/>
+                            <constraint firstItem="3UC-30-tyU" firstAttribute="top" secondItem="zas-eK-Jof" secondAttribute="bottom" constant="20" id="wLL-um-rBW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L5a-Xb-H4C"/>
                     </view>
@@ -403,6 +413,9 @@
             <point key="canvasLocation" x="33" y="33"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="teamwork" width="636" height="633"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mFo-in-Yhs"/>
     </inferredMetricsTieBreakers>
