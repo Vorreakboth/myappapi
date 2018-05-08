@@ -428,9 +428,8 @@
                     </view>
                     <connections>
                         <outlet property="imageQRCode" destination="InX-Gt-02S" id="ng5-6u-a6f"/>
-                        <outlet property="textFieldInput" destination="yE8-kN-mMt" id="q7m-HR-t3b"/>
-                        <outlet property="textFieldInput1" destination="yE8-kN-mMt" id="REp-5e-IYX"/>
-                        <outlet property="textFieldInput2" destination="zXg-uc-Gy0" id="Aoq-3S-JvU"/>
+                        <outlet property="textFieldInput1" destination="yE8-kN-mMt" id="vAo-wx-4Js"/>
+                        <outlet property="textFieldInput2" destination="zXg-uc-Gy0" id="yFn-4W-Glk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6TE-Ws-m6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
