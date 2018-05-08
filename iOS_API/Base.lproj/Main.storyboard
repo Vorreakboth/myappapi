@@ -321,7 +321,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zas-eK-Jof">
-                                <rect key="frame" x="160" y="369" width="55" height="30"/>
+                                <rect key="frame" x="160" y="268.5" width="55" height="30"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -330,7 +330,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mL-Wa-bqa">
-                                <rect key="frame" x="164" y="318.5" width="47" height="30"/>
+                                <rect key="frame" x="164" y="218.5" width="47" height="30"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -339,7 +339,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UC-30-tyU">
-                                <rect key="frame" x="136" y="469" width="103" height="30"/>
+                                <rect key="frame" x="136" y="368.5" width="103" height="30"/>
                                 <state key="normal" title="QR Code Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -348,7 +348,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwq-m7-sfG">
-                                <rect key="frame" x="120" y="419" width="135" height="30"/>
+                                <rect key="frame" x="120" y="318.5" width="135" height="30"/>
                                 <state key="normal" title="QR Code Generator">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -359,14 +359,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="5mL-Wa-bqa" firstAttribute="centerY" secondItem="xJa-cF-m0w" secondAttribute="centerY" id="3M8-f7-zNe"/>
-                            <constraint firstItem="Nwq-m7-sfG" firstAttribute="centerX" secondItem="xJa-cF-m0w" secondAttribute="centerX" id="3cf-Bb-IOX"/>
-                            <constraint firstItem="Nwq-m7-sfG" firstAttribute="top" secondItem="zas-eK-Jof" secondAttribute="bottom" constant="20" id="8Z5-Hz-ySR"/>
-                            <constraint firstItem="zas-eK-Jof" firstAttribute="centerX" secondItem="xJa-cF-m0w" secondAttribute="centerX" id="FvK-Kq-xto"/>
-                            <constraint firstItem="3UC-30-tyU" firstAttribute="centerX" secondItem="xJa-cF-m0w" secondAttribute="centerX" id="Ly8-Z0-bXc"/>
-                            <constraint firstItem="zas-eK-Jof" firstAttribute="top" secondItem="5mL-Wa-bqa" secondAttribute="bottom" constant="20" id="T6U-CW-fWC"/>
-                            <constraint firstItem="5mL-Wa-bqa" firstAttribute="centerX" secondItem="xJa-cF-m0w" secondAttribute="centerX" id="eSw-EI-b6y"/>
-                            <constraint firstItem="3UC-30-tyU" firstAttribute="top" secondItem="Nwq-m7-sfG" secondAttribute="bottom" constant="20" id="z5B-6Y-9MD"/>
+                            <constraint firstItem="Nwq-m7-sfG" firstAttribute="top" secondItem="zas-eK-Jof" secondAttribute="bottom" constant="20" id="2H2-lz-Lts"/>
+                            <constraint firstItem="Nwq-m7-sfG" firstAttribute="centerX" secondItem="xJa-cF-m0w" secondAttribute="centerX" id="55f-SE-uwF"/>
+                            <constraint firstItem="5mL-Wa-bqa" firstAttribute="centerX" secondItem="xJa-cF-m0w" secondAttribute="centerX" id="CIB-No-qxb"/>
+                            <constraint firstItem="Nwq-m7-sfG" firstAttribute="centerY" secondItem="xJa-cF-m0w" secondAttribute="centerY" id="Ewx-Vu-P7Q"/>
+                            <constraint firstItem="3UC-30-tyU" firstAttribute="top" secondItem="Nwq-m7-sfG" secondAttribute="bottom" constant="20" id="Xy2-BF-ETz"/>
+                            <constraint firstItem="3UC-30-tyU" firstAttribute="centerX" secondItem="xJa-cF-m0w" secondAttribute="centerX" id="Z2G-F4-DDm"/>
+                            <constraint firstItem="zas-eK-Jof" firstAttribute="top" secondItem="5mL-Wa-bqa" secondAttribute="bottom" constant="20" id="b2b-Hg-Gcz"/>
+                            <constraint firstItem="zas-eK-Jof" firstAttribute="centerX" secondItem="xJa-cF-m0w" secondAttribute="centerX" id="upC-57-xnx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L5a-Xb-H4C"/>
                     </view>
@@ -376,29 +376,66 @@
             </objects>
             <point key="canvasLocation" x="756" y="32.833583208395808"/>
         </scene>
-        <!--View Controller-->
+        <!--Code Gen View Controller-->
         <scene sceneID="Ylf-i0-Kq6">
             <objects>
-                <viewController id="hZh-LJ-2TI" sceneMemberID="viewController">
+                <viewController id="hZh-LJ-2TI" customClass="QRCodeGenViewController" customModule="iOS_API" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pkj-lg-Y1m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="InX-Gt-02S">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="InX-Gt-02S">
+                                <rect key="frame" x="137" y="283" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4r0-4E-RbX"/>
+                                    <constraint firstAttribute="height" constant="100" id="u93-Kz-dcB"/>
+                                </constraints>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yE8-kN-mMt">
+                                <rect key="frame" x="20" y="84" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zXg-uc-Gy0">
+                                <rect key="frame" x="20" y="134" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCz-fx-Jfr">
+                                <rect key="frame" x="155" y="184" width="64" height="30"/>
+                                <state key="normal" title="Generate"/>
+                                <connections>
+                                    <action selector="buttonGen:" destination="hZh-LJ-2TI" eventType="touchUpInside" id="wZg-B6-KEl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="InX-Gt-02S" firstAttribute="centerY" secondItem="Pkj-lg-Y1m" secondAttribute="centerY" id="Qjn-L3-BrL"/>
-                            <constraint firstItem="InX-Gt-02S" firstAttribute="centerX" secondItem="Pkj-lg-Y1m" secondAttribute="centerX" id="RpW-57-pfT"/>
+                            <constraint firstItem="zXg-uc-Gy0" firstAttribute="leading" secondItem="FvR-jd-F6b" secondAttribute="leading" constant="20" id="8AG-Oy-jGl"/>
+                            <constraint firstItem="yE8-kN-mMt" firstAttribute="leading" secondItem="FvR-jd-F6b" secondAttribute="leading" constant="20" id="9bu-kd-40u"/>
+                            <constraint firstItem="InX-Gt-02S" firstAttribute="centerX" secondItem="Pkj-lg-Y1m" secondAttribute="centerX" id="FY3-1p-ScF"/>
+                            <constraint firstItem="FvR-jd-F6b" firstAttribute="trailing" secondItem="yE8-kN-mMt" secondAttribute="trailing" constant="20" id="Syf-r9-4Xn"/>
+                            <constraint firstItem="InX-Gt-02S" firstAttribute="centerY" secondItem="Pkj-lg-Y1m" secondAttribute="centerY" id="T9Z-bi-Xua"/>
+                            <constraint firstItem="zXg-uc-Gy0" firstAttribute="top" secondItem="yE8-kN-mMt" secondAttribute="bottom" constant="20" id="Zbd-Ze-fC8"/>
+                            <constraint firstItem="jCz-fx-Jfr" firstAttribute="centerX" secondItem="Pkj-lg-Y1m" secondAttribute="centerX" id="cyj-Hn-UVh"/>
+                            <constraint firstItem="yE8-kN-mMt" firstAttribute="top" secondItem="FvR-jd-F6b" secondAttribute="top" constant="20" id="l4l-F1-A3N"/>
+                            <constraint firstItem="jCz-fx-Jfr" firstAttribute="top" secondItem="zXg-uc-Gy0" secondAttribute="bottom" constant="20" id="pep-5M-q4U"/>
+                            <constraint firstItem="FvR-jd-F6b" firstAttribute="trailing" secondItem="zXg-uc-Gy0" secondAttribute="trailing" constant="20" id="rtd-bT-fyn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FvR-jd-F6b"/>
                     </view>
+                    <connections>
+                        <outlet property="imageQRCode" destination="InX-Gt-02S" id="ng5-6u-a6f"/>
+                        <outlet property="textFieldInput" destination="yE8-kN-mMt" id="q7m-HR-t3b"/>
+                        <outlet property="textFieldInput1" destination="yE8-kN-mMt" id="REp-5e-IYX"/>
+                        <outlet property="textFieldInput2" destination="zXg-uc-Gy0" id="Aoq-3S-JvU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6TE-Ws-m6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="770"/>
+            <point key="canvasLocation" x="756" y="769.56521739130437"/>
         </scene>
         <!--Code View Controller-->
         <scene sceneID="jg8-Es-P9d">

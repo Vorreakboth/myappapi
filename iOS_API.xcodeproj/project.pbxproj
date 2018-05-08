@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5297B5CE20A15B4D00B67A16 /* QRCodeGenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5297B5CD20A15B4D00B67A16 /* QRCodeGenViewController.swift */; };
 		A5FCA41D7C285C5792BA0DBC /* Pods_iOS_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A136234207EAE036F18357 /* Pods_iOS_API.framework */; };
 		D700FBBB204E54170012E1F6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700FBBA204E54170012E1F6 /* ProfileViewController.swift */; };
 		D74534B82060A918003A7A31 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74534B72060A918003A7A31 /* QRCodeViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		02A136234207EAE036F18357 /* Pods_iOS_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5297B5CD20A15B4D00B67A16 /* QRCodeGenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGenViewController.swift; sourceTree = "<group>"; };
 		67F83C59F6634E2D2E968034 /* Pods-iOS_API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_API.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_API/Pods-iOS_API.debug.xcconfig"; sourceTree = "<group>"; };
 		D700FBBA204E54170012E1F6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D74534B72060A918003A7A31 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				D7696234204CFD4300D4F59A /* LoginViewController.swift */,
 				D700FBBA204E54170012E1F6 /* ProfileViewController.swift */,
 				D74534B72060A918003A7A31 /* QRCodeViewController.swift */,
+				5297B5CD20A15B4D00B67A16 /* QRCodeGenViewController.swift */,
 				D7DD3A9E204CEDB10052CE95 /* Main.storyboard */,
 				D7DD3AA1204CEDB10052CE95 /* Assets.xcassets */,
 				D7DD3AA3204CEDB10052CE95 /* LaunchScreen.storyboard */,
@@ -228,6 +231,7 @@
 				D7696235204CFD4300D4F59A /* LoginViewController.swift in Sources */,
 				D700FBBB204E54170012E1F6 /* ProfileViewController.swift in Sources */,
 				D7DD3A9B204CEDB10052CE95 /* AppDelegate.swift in Sources */,
+				5297B5CE20A15B4D00B67A16 /* QRCodeGenViewController.swift in Sources */,
 				D74534B82060A918003A7A31 /* QRCodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
