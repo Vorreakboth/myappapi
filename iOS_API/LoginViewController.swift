@@ -31,7 +31,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         //making a post request
         Alamofire.request(URL_USER_LOGIN, method: .post, parameters: parameters).responseJSON
-            {
+        {
                 response in
                 //printing response
                 print(response)
